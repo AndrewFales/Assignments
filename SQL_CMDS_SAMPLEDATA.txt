@@ -1,0 +1,67 @@
+
+--------------------------------------
+---Bookstore Database---Andrew Fales--
+--------------------------------------
+
+-- Insert sample data into Authors table
+INSERT INTO Authors (authorID, authorFirstName, authorLastName, authorEmail, publisherID)
+VALUES
+  (1, 'John', 'Doe', 'johndoe@example.com', 1),
+  (2, 'Jane', 'Smith', 'janesmith@example.com', 2);
+
+-- Insert sample data into Publisher table
+INSERT INTO Publisher (publisherID, publisherName, publisherEmail, publisherStreetAddress, publisherCity, publisherState, publisherCountry)
+VALUES
+  (1, 'Publisher A', 'publisherA@example.com', '123 Street', 'City A', 'State A', 'Country A'),
+  (2, 'Publisher B', 'publisherB@example.com', '456 Avenue', 'City B', 'State B', 'Country B');
+
+-- Insert sample data into BookFormats table
+INSERT INTO BookFormats (formatID, formatName)
+VALUES
+  (1, 'Trade Paper'),
+  (2, 'Trade Cloth'),
+  (3, 'Mass Market'),
+  (4, 'ePub'),
+  (5, 'Disc');
+
+-- Insert sample data into BookGenres table
+INSERT INTO BookGenres (genreID, genreName)
+VALUES
+  (1, 'Fiction'),
+  (2, 'Fantasy'),
+  (3, 'Science Fiction'),
+  (4, 'Young Adult Fiction'),
+  (5, 'Young Adult SciFi/Fantasy'),
+  (6, 'Juvenile');
+
+-- Insert sample data into Books table
+INSERT INTO Books (bookID, bookTitle, bookPrice, formatID, genreID, publisherID)
+VALUES
+  (1, 'Book 1', 19.99, 1, 2, 1),
+  (2, 'Book 2', 12.99, 3, 1, 2);
+
+-- Insert sample data into Transactions table
+INSERT INTO Transactions (transactionID, customerID, quantity, transactionPurchaseAmount, transactionDATE)
+VALUES
+  (1, 1, 2, 39.98, '2023-05-01'),
+  (2, 2, 1, 12.99, '2023-05-02');
+
+-- Insert sample data into Customers table
+INSERT INTO Customers (customerID, customerFirstName, customerLastName, customerEmail, customerPhone)
+VALUES
+  (1, 'Alice', 'Johnson', 'alicejohnson@example.com', '123-456-7890'),
+  (2, 'Bob', 'Smith', 'bobsmith@example.com', '987-654-3210');
+
+-- Insert sample data into Authors_Books table
+INSERT INTO Authors_Books (authorID, bookID)
+VALUES
+  (1, 1),
+  (2, 1),
+  (2, 2);
+
+-- Insert sample data into Books_Transactions table
+INSERT INTO Books_Transactions (bookID, transactionID)
+VALUES
+  (1, 1),
+  (1, 2),
+  (2, 2);
